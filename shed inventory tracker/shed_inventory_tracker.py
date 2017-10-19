@@ -15,7 +15,7 @@ class Person():
 
 	#checks if account exists, if not then it prompts user to create an account
 	#and then tries to validate once again
-	#account is the person who validates username's sign-in/out
+	#admin is the person who validates username's sign-in/out
 	def validate(self, username, admin, adminpswd):
 		if (admin not in main.accountDict):
 			main.createAccount();
@@ -45,8 +45,8 @@ class main():
 	@staticmethod
 	def createAccount():
 		userName = input("Enter a username: ");
-		while (userName == ""):
-			userName = input("Username cannont be empty! Enter a valid username: ");
+		while (userName == "" or userName in accountDict):
+			userName = input("Username cannot be empty! Enter a valid username: ");
 		password = input("Enter a password: ");
 		while (password == ""):
 			password = input("Password cannot be empty! Enter a valid password: ");
