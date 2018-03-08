@@ -10,5 +10,18 @@ def reverseString(myString):
 		backwards = i + backwards;
 	print(backwards);
 
+def onbase():
+	i = 0
+	for i in range(101):
+		if i % 3 == 0:
+			if i % 7 == 0:
+				print("OnBase");
+			print("On");
+		elif i % 7 == 0:
+			print("Base");
+		else:
+			print(i);
+
 if __name__ == '__main__':
-    reverseString(input("Please enter a string; type EXIT to quit: "));
+    #reverseString(input("In quotation marks, enter a string: "));
+    onbase();
